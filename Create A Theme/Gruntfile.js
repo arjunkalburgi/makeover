@@ -1,17 +1,16 @@
-/* 
-Add link to index.html for presentation view
-<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/solarized.css'); return false;">Solarized</a>
-*/
-
 module.exports = function(grunt) {
   
   var themename = grunt.option('theme'); 
+  var themelink = "- <a href='#'' onclick=\"document.getElementById('theme').setAttribute('href','themes/"+themename+".css'); return false;\">"+themename.charAt(0).toUpperCase()+themename.slice(1)+"</a> \n\
+		<!-- build:template \n\
+		<%= newTheme %> \n\
+		/build -->"
 
   grunt.initConfig({
   		pkg: grunt.file.readJSON("package.json"),
 
-  		// Compile scss (source dir)
-  		// Place in '../Themes dir' and 'Reveal\ Files/css/theme'
+  		// 1. Compile scss (given theme)
+  		// 2. Place in '../Themes' and 'Reveal\ Files/css/theme' directories
 		sass: {
 			options: {
 				compress: false,
@@ -32,9 +31,25 @@ module.exports = function(grunt) {
 					ext: '.css'
 				}]
 			}
+		},
+
+		// 3. Add link to index.html for presentation view
+		processhtml: {
+			options: {
+				data: {
+					newTheme: themelink
+				}
+			},
+			dist: {
+				files: {
+					'../index.html': ['../index.html']
+				}
+			}
 		}
+
   });
 
+  grunt.loadNpmTasks("grunt-processhtml");
   grunt.loadNpmTasks("grunt-contrib-sass");
-  grunt.registerTask("default", ['sass']);
+  grunt.registerTask("default", ['sass', 'processhtml']); //add to default
 };

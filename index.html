@@ -14,14 +14,14 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="revealstuff/css/reveal.css">
-		<link rel="stylesheet" href="revealstuff/css/theme/moon.css" id="theme">
+		<link rel="stylesheet" href="Reveal Files/css/reveal.css">
+		<link rel="stylesheet" href="Reveal Files/css/theme/moon.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="revealstuff/lib/css/zenburn.css">
+		<link rel="stylesheet" href="Reveal Files/lib/css/zenburn.css">
 
 		<!--[if lt IE 9]>
-		<script src="revealstuff/lib/js/html5shiv.js"></script>
+		<script src="Reveal Files/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
@@ -61,17 +61,20 @@
 					<h2>Try a few</h2>
 					<p>
 						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/solarized.css'); return false;">Solarized</a>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/black.css'); return false;">Black</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/white.css'); return false;">White</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/league.css'); return false;">League</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/sky.css'); return false;">Sky</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/beige.css'); return false;">Beige</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/simple.css'); return false;">Simple</a>, <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/serif.css'); return false;">Serif</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/blood.css'); return false;">Blood</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/night.css'); return false;">Night</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/moon.css'); return false;">Moon</a>,
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/solarized.css'); return false;">Solarized</a>, <br>
+						<!-- build:template 
+						<%= newTheme %> 
+						/build -->
 					</p>
 				</section>
 
@@ -125,8 +128,8 @@ function linkify( selector ) {
 
 		</div>
 
-		<script src="revealstuff/lib/js/head.min.js"></script>
-		<script src="revealstuff/js/reveal.js"></script>
+		<script src="Reveal Files/lib/js/head.min.js"></script>
+		<script src="Reveal Files/js/reveal.js"></script>
 
 		<script>
 
@@ -145,12 +148,12 @@ function linkify( selector ) {
 
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'revealstuff/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'revealstuff/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'revealstuff/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'revealstuff/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'revealstuff/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'revealstuff/plugin/notes/notes.js', async: true }
+					{ src: 'Reveal Files/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'Reveal Files/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'Reveal Files/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'Reveal Files/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'Reveal Files/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'Reveal Files/plugin/notes/notes.js', async: true }
 				]
 			});
 
