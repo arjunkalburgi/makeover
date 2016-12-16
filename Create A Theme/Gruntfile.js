@@ -1,7 +1,12 @@
-// Add link to index.html for presentation view
+/* 
+Add link to index.html for presentation view
+<a href="#" onclick="document.getElementById('theme').setAttribute('href','themes/solarized.css'); return false;">Solarized</a>
+*/
 
 module.exports = function(grunt) {
-  // Do grunt-related things in here
+  
+  var themename = grunt.option('theme'); 
+
   grunt.initConfig({
   		pkg: grunt.file.readJSON("package.json"),
 
@@ -14,18 +19,16 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: [{
-					expand: true, 
-					cwd: 'source', 
-					src: ['*.scss'], 
-
-					dest: '../Themes', 
+					expand: true,
+					cwd: 'source',
+					src: [themename + '.scss'],
+					dest: '../Themes',
 					ext: '.css'
 				},{
-					expand: true, 
-					cwd: 'source', 
-					src: ['*.scss'], 
-
-					dest: '../Reveal\ Files/css/theme', 
+					expand: true,
+					cwd: 'source',
+					src: [themename + '.scss'],
+					dest: '../Reveal\ Files/css/theme',
 					ext: '.css'
 				}]
 			}
