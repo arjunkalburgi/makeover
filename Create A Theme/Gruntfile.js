@@ -49,7 +49,11 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.registerTask('alldone', function() {
+  	// 4. Tell user to PR!
+  	grunt.log.write("You've made a new theme! Make sure to add "+themename.charAt(0).toUpperCase()+themename.slice(1)+" to the makeover💄 library by submitting a Pull Request at https://github.com/askalburgi/makeover\n")
+  })
   grunt.loadNpmTasks("grunt-processhtml");
   grunt.loadNpmTasks("grunt-contrib-sass");
-  grunt.registerTask("default", ['sass', 'processhtml']); //add to default
+  grunt.registerTask("default", ['sass', 'processhtml', 'alldone']);
 };
