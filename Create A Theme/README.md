@@ -2,13 +2,20 @@ Themes are written using Sass just like in hakim's reveal.js. This is to keep th
 
 ## Creating a Theme
 
-To create your own theme, start by duplicating a ```.scss``` file in [/css/theme/source](https://github.com/askalburgi/makeover/blob/master/Create\ A\ Theme/source) and making appropriate changes (name of the file, sass/style). If you don't know sass, I found [this tutorial helpful](http://sass-lang.com/guide). 
+To create your own theme, fork this project. After your theme is made you can submit a pull request back into makeover to grow the library. 
+
+Once forked, start by duplicating a `.scss` file in [/css/theme/source](https://github.com/askalburgi/makeover/blob/master/Create\ A\ Theme/source) and making appropriate changes (name of the file, sass/style). If you don't know sass, I found [this tutorial helpful](http://sass-lang.com/guide). 
 
 Once you've made some changes and want to test out your theme, run `grunt --theme=theme_name --force`. This will compile your theme in the appropriate directories, including adding a link to `path_to/index.html#/themes` where you can see your changes in index.html. 
 
 To recompile your theme after making changes, run `grunt sass --theme=theme_name`. This won't re-add the link to your theme to `path_to/index.html#/themes`. 
 
-Once you are finished with your theme, don't forget to submit a PR back into [makeover](https://github.com/askalburgi/makeover) so that others can use and build off your theme as well!! 
+Once you are finished with your theme, don't forget to submit a pull request back into [makeover](https://github.com/askalburgi/makeover) so that others can use and build off your theme as well!! ([See below for details](https://github.com/askalburgi/makeover/tree/master/Create%20A%20Theme#how-to-pr))
+
+## How to PR 
+Your PR should only contain 3 added files (`Create A Theme/source/theme_name.scss`, `Reveal Files/css/theme/theme_name.css` and `Themes/theme_name.css`) and a modified index.html file. Make sure the index.html has only one link to your theme! If you run the default/main grunt command more than once on your theme, it will create multiple links. 
+
+Once you ensure the repo is clean [make a pull request](https://github.com/askalburgi/makeover/pulls)
 
 ## Additional Theme Info
 (from hakim)
