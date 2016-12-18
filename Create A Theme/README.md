@@ -1,21 +1,27 @@
-## Dependencies
-
-Themes are written using Sass to keep things modular and reduce the need for repeated selectors across files. Make sure that you have the reveal.js development environment including the Grunt dependencies installed before proceding: https://github.com/hakimel/reveal.js#full-setup
+Themes are written using Sass just like in hakim's reveal.js. This is to keep things modular and reduce the need for repeated selectors across files. I took the liberty of adding to hakim's setup so that you can make makeover themes even easier.
 
 ## Creating a Theme
 
-To create your own theme, start by duplicating a ```.scss``` file in [/css/theme/source](https://github.com/hakimel/reveal.js/blob/master/css/theme/source). It will be automatically compiled by Grunt from Sass to CSS (see the [Gruntfile](https://github.com/hakimel/reveal.js/blob/master/Gruntfile.js)) when you run `grunt css-themes`.
+To create your own theme, start by duplicating a ```.scss``` file in [/css/theme/source](https://github.com/askalburgi/makeover/blob/master/Create\ A\ Theme/source) and making appropriate changes (name of the file, sass/style). If you don't know sass, I found [this tutorial helpful](http://sass-lang.com/guide). 
 
+Once you've made some changes and want to test out your theme, run `grunt --theme=theme_name --force`. This will compile your theme in the appropriate directories, including adding a link to `path_to/index.html#/themes` where you can see your changes in index.html. 
+
+To recompile your theme after making changes, run `grunt sass --theme=theme_name`. This won't re-add the link to your theme to `path_to/index.html#/themes`. 
+
+Once you are finished with your theme, don't forget to submit a PR back into [makeover](https://github.com/askalburgi/makeover) so that others can use and build off your theme as well!! 
+
+## Additional Theme Info
+(from hakim)
 Each theme file does four things in the following order:
 
-1. **Include [/css/theme/template/mixins.scss](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/mixins.scss)**
+1. **Include [/css/theme/template/mixins.scss](https://github.com/askalburgi/makeover/blob/master/Create\ A\ Theme/template/mixins.scss)**
 Shared utility functions.
 
-2. **Include [/css/theme/template/settings.scss](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/settings.scss)**
+2. **Include [/css/theme/template/settings.scss](https://github.com/askalburgi/makeover/blob/master/Create\ A\ Theme/template/settings.scss)**
 Declares a set of custom variables that the template file (step 4) expects. Can be overridden in step 3.
 
 3. **Override**
-This is where you override the default theme. Either by specifying variables (see [settings.scss](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/settings.scss) for reference) or by adding any selectors and styles you please.
+This is where you override the default theme. Either by specifying variables (see [settings.scss](https://github.com/askalburgi/makeover/blob/master/Create\ A\ Theme/template/settings.scss) for reference) or by adding any selectors and styles you please.
 
-4. **Include [/css/theme/template/theme.scss](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/theme.scss)**
+4. **Include [/css/theme/template/theme.scss](https://github.com/askalburgi/makeover/blob/master/Create\ A\ Theme/template/theme.scss)**
 The template theme file which will generate final CSS output based on the currently defined variables.
