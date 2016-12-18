@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   
   var themename = grunt.option('theme'); 
-  var themelink = "- <a href='#'' onclick=\"document.getElementById('theme').setAttribute('href','themes/"+themename+".css'); return false;\">"+themename.charAt(0).toUpperCase()+themename.slice(1)+"</a> \n\
+  var themelink = "<a href='#'' onclick=\"document.getElementById('theme').setAttribute('href','themes/"+themename+".css'); return false;\">"+themename.charAt(0).toUpperCase()+themename.slice(1)+"</a>, \n\
 		<!-- build:template \n\
 		<%= newTheme %> \n\
 		/build -->"
