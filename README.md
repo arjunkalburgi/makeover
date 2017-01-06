@@ -15,4 +15,4 @@ Open source CSS and JS library for reveal.js
 
 
 ##Create a theme
-See [/themes/README.md](https://github.com/askalburgi/makeover/blob/master/themes/README.md)
+See [/Create A Theme/README.md](https://github.com/askalburgi/makeover/blob/master/Create%20A%20Theme/README.md)
