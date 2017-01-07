@@ -34,7 +34,7 @@ Once you are finished with your theme, don't forget to submit a pull request bac
 ### Install dependencies 
 If you don't have grunt installed, you'll need to run `npm install` in the Create A Theme directory.
 
-If npm is not installed - check it out [here](https://nodejs.org/en/download/)
+If npm is not installed - check it out [here](https://nodejs.org/en/download/).
 Once installed, `npm install` should now work.
 
 
