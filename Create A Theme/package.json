@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/askalburgi/makeover#readme",
   "devDependencies": {
+    "sass": "^0.5.0",
     "grunt": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-processhtml": "^0.4.1"
