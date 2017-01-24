@@ -1,5 +1,8 @@
 /**
  * ECE Week (eceweek.compeclub.com) theme for reveal.js.
+ * 
+ * Note - this theme uses added elements. Please place slide 
+ * contents (excluding header) in a div with class "contents"
  *
  * Copyright (C) 2017 Arjun Kalburgi, http://www.arjunkalburgi.com
  */
@@ -22,6 +25,19 @@ $headingFont: 'Source Sans Pro', sans-serif;
 $headingColor: rgb(255, 189, 56); 
 $headingTextTransform: none; 
 $linkColor: #ddd; 
+
+.slides section .contents {
+	background-image: url("https://cdn.rawgit.com/UAlbertaCompEClub/eceweekwebsite2017/master/static/images/tabbackground.png"); 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+	height: 500px; 
+	color: black; 
+}
+
+.slides section .contents p:first-child {
+	padding-top: 200px; 
+}
+
 
 
 // Background generator
